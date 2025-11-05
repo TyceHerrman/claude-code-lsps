@@ -1,0 +1,26 @@
+{
+    "typescript": {
+        "command": "typescript-language-server",
+        "args": [
+            "--stdio"
+        ],
+        "languages": [
+            "typescript",
+            "javascript",
+            "typescriptreact",
+            "javascriptreact"
+        ],
+        "fileExtensions": [
+            ".ts",
+            ".tsx",
+            ".js",
+            ".jsx",
+            ".mjs",
+            ".cjs"
+        ],
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    }
+}

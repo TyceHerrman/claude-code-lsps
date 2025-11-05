@@ -1,0 +1,41 @@
+{
+  "name": "local-lsp",
+  "owner": {
+    "name": "Piebald LLC",
+    "email": "support@piebald.ai"
+  },
+  "plugins": [
+    {
+      "name": "typescript-language-server",
+      "version": "0.1.0",
+      "source": "./typescript-language-server",
+      "description": "TypeScript and JavaScript language server integration",
+      "category": "development",
+      "tags": [
+        "typescript",
+        "javascript",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      }
+    },
+    {
+      "name": "rust-analyzer",
+      "version": "0.1.0",
+      "source": "./rust-analyzer",
+      "description": "Rust language server integration with rust-analyzer",
+      "category": "development",
+      "tags": [
+        "rust",
+        "lsp"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      }
+    }
+  ]
+}
