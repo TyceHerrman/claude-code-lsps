@@ -208,13 +208,3 @@ bun install -g vscode-langservers-extracted
 This provides `vscode-html-language-server` and `vscode-css-language-server` executables.
 
 </details>
-
-
-
-## Patching Claude Code manually
-
-Note that this will only work with npm-based installations.  If you have the native installation (run `claude doctor` to check), then tweakcc is your only option.
-
-1. Find your `cli.js`.  Depending on where you installed it, it could be in several different locations.  It's often at `NPM_ROOT/@anthropic-ai/claude-code/cli.js`&mdash;use `npm root -g` to get your global installation location.
-
-2.
