@@ -4,20 +4,14 @@
         "args": [
             "--stdio"
         ],
-        "languages": [
-            "typescript",
-            "javascript",
-            "typescriptreact",
-            "javascriptreact"
-        ],
-        "fileExtensions": [
-            ".ts",
-            ".tsx",
-            ".js",
-            ".jsx",
-            ".mjs",
-            ".cjs"
-        ],
+        "extensionToLanguage": {
+            ".ts": "typescript",
+            ".tsx": "typescriptreact",
+            ".js": "javascript",
+            ".jsx": "javascriptreact",
+            ".mjs": "javascript",
+            ".cjs": "javascript"
+        },
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},

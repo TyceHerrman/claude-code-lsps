@@ -2,13 +2,10 @@
     "csharp": {
         "command": "csharp-ls",
         "args": [],
-        "languages": [
-            "csharp"
-        ],
-        "fileExtensions": [
-            ".cs",
-            ".csx"
-        ],
+        "extensionToLanguage": {
+            ".cs": "csharp",
+            ".csx": "csharp"
+        },
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},

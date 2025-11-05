@@ -4,14 +4,11 @@
         "args": [
             "--stdio"
         ],
-        "languages": [
-            "python"
-        ],
-        "fileExtensions": [
-            ".py",
-            ".pyi",
-            ".pyw"
-        ],
+        "extensionToLanguage": {
+            ".py": "python",
+            ".pyi": "python",
+            ".pyw": "python"
+        },
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},

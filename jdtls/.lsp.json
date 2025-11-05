@@ -2,12 +2,9 @@
     "java": {
         "command": "jdtls",
         "args": [],
-        "languages": [
-            "java"
-        ],
-        "fileExtensions": [
-            ".java"
-        ],
+        "extensionToLanguage": {
+            ".java": "java"
+        },
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},

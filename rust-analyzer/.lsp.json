@@ -2,12 +2,9 @@
     "rust": {
         "command": "rust-analyzer",
         "args": [],
-        "languages": [
-            "rust"
-        ],
-        "fileExtensions": [
-            ".rs"
-        ],
+        "extensionToLanguage": {
+            ".rs": "rust"
+        },
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},

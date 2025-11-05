@@ -4,17 +4,14 @@
         "args": [
             "--stdio"
         ],
-        "languages": [
-            "php"
-        ],
-        "fileExtensions": [
-            ".php",
-            ".phtml",
-            ".php3",
-            ".php4",
-            ".php5",
-            ".phps"
-        ],
+        "extensionToLanguage": {
+            ".php": "php",
+            ".phtml": "php",
+            ".php3": "php",
+            ".php4": "php",
+            ".php5": "php",
+            ".phps": "php"
+        },
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},

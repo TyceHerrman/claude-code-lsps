@@ -2,22 +2,18 @@
     "cpp": {
         "command": "clangd",
         "args": [],
-        "languages": [
-            "c",
-            "cpp"
-        ],
-        "fileExtensions": [
-            ".c",
-            ".cpp",
-            ".cc",
-            ".cxx",
-            ".c++",
-            ".h",
-            ".hpp",
-            ".hh",
-            ".hxx",
-            ".h++"
-        ],
+        "extensionToLanguage": {
+            ".c": "c",
+            ".cpp": "cpp",
+            ".cc": "cpp",
+            ".cxx": "cpp",
+            ".c++": "cpp",
+            ".h": "c",
+            ".hpp": "cpp",
+            ".hh": "cpp",
+            ".hxx": "cpp",
+            ".h++": "cpp"
+        },
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},
