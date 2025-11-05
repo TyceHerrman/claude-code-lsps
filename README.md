@@ -2,7 +2,7 @@
 
 This repository contains a [Claude Code marketplace](...) with plugins that offer LSP servers for TypeScript, Rust, X, Y, Z.  [LSP servers]() provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
-**Claude Code is going to officially support LSP soon.**  In 2.0.30 (October 31st) they adding the working beginnings of a system to run LSP servers from plugins automatically on startup, and an `LSP` tool that Claude can use to
+[**Claude Code is going to officially support LSP soon.**](linktoreddit)  In 2.0.30 (October 31st) they adding the working beginnings of a system to run LSP servers from plugins automatically on startup, and an `LSP` tool (enable via `$ENABLE_LSP_TOOL=1`) that Claude can use to
 - Go to the definition for symbols (`goToDefinition`)
 - Hover over symbols (`hover`)
 - List all the symbols in a file (`documentSymbol`)
@@ -10,13 +10,13 @@ This repository contains a [Claude Code marketplace](...) with plugins that offe
 - Search for symbols across the workspace (`workspaceSymbol`)
 
 > [!warning]
-> Support for LSP in Claude Code is pretty raw still.  There are bugs in the different LSP operations, no documention, and no UI indication that your LSP servers are started/running/have errors or even exist.  But it's there
+> Support for LSP in Claude Code is pretty raw still.  There are bugs in the different LSP operations, no documention, and no UI indication that your LSP servers are started/running/have errors or even exist.  But it's there, and with [tweakcc](https://github.com/Piebald-AI/tweakcc) you can make it work.
 
 ## Patching Claude Code
 
 You can manually patch it, but it's much easier to use [tweakcc](https://github.com/Piebald-AI/tweakcc) to automatically detect your Claude Code installation (npm or native) apply the necessary patches.
 
-Run `npx tweakcc --apply`.  That's literally it.  It will automatically patch your Claude Code installation to make LSP support usable.  (It also does a bunch of other things like let you customize all the system prompt parts, create new CC themes, change the thinking verbs, and a lot more.)
+Run `npx tweakcc --apply`.  It will automatically patch your Claude Code installation to make LSP support usable.  (It also does a bunch of other things like let you customize all the system prompt parts, create new CC themes, change the thinking verbs, and a lot more.)
 
 If you'd like to apply the patches yourself, go the bottom of this page.
 
@@ -37,7 +37,8 @@ Then enable the plugins of your choice:
 
 Here's a screenshot:
 
-<screenshot>
+<img width="603" height="374" alt="image" src="https://github.com/user-attachments/assets/207ebb79-8c45-446b-9c08-eb81d235c301" />
+
 
 ## Language-specific setup instructions
 
@@ -51,7 +52,7 @@ Uses `rust-analyzer`, the official modern Rust Language Server and the same one 
 rustup component add rust-analyzer
 ```
 
-The `rust-analyzer executable needs to be in your PATH.
+The `rust-analyzer` executable needs to be in your PATH.
 
 ### JavaScript/TypeScript
 
