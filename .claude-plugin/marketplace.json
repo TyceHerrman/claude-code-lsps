@@ -6,9 +6,9 @@
   },
   "plugins": [
     {
-      "name": "typescript-language-server",
+      "name": "vtsls",
       "version": "0.1.0",
-      "source": "./typescript-language-server",
+      "source": "./vtsls",
       "description": "TypeScript and JavaScript language server integration (using vtsls)",
       "category": "development",
       "tags": [

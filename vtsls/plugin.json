@@ -1,5 +1,5 @@
 {
-  "name": "typescript-language-server",
+  "name": "vtsls",
   "version": "0.1.0",
   "description": "TypeScript and JavaScript language server integration (using vtsls)",
   "author": {
