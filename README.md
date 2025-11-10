@@ -58,20 +58,20 @@ The `rust-analyzer` executable needs to be in your PATH.
 </details>
 
 <details>
-<summary>JavaScript/TypeScript (<code>typescript-language-server</code>)</summary>
+<summary>JavaScript/TypeScript (<code>vtsls</code>)</summary>
 
-Install the `typescript-language-server` and `typescript` packages globally:
+Install **vtsls** and `typescript` packages globally:
 ```bash
 # npm
-npm install -g typescript-language-server typescript
+npm install -g @vtsls/language-server typescript
 
 # pnpm
-pnpm install -g typescript-language-server typescript
+pnpm install -g @vtsls/language-server typescript
 
 # bun
-bun install -g typescript-language-server typescript
+bun install -g @vtsls/language-server typescript
 ```
-Make sure the `typescript-language-server` executable is in your PATH.
+Make sure the `vtsls` executable is in your PATH.
 
 </details>
 
