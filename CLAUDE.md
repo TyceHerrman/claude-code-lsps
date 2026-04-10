@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Claude Code marketplace containing LSP (Language Server Protocol) plugins. Each plugin integrates a language server with Claude Code, providing code intelligence features like go-to-definition, find-references, hover info, and symbol search.
 
-**Supported languages:** TypeScript/JavaScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL, Ada, Dart, Solidity, Markdown/mdbase
+**Supported languages:** TypeScript/JavaScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS/JSON, LaTeX, Julia, Vue, OCaml, BSL, Ada, Dart, Solidity, Markdown/mdbase
 
 **Compatibility target:** Claude Code 2.1.50+ (latest release: 2.1.52)
 
@@ -70,7 +70,7 @@ scripts/
 
 ## LSP Configuration Fields
 
-- `command`: The executable to run (must be in PATH)
+- `command`: The executable to run (usually on `PATH`; `vscode-langservers` uses `node` with plugin-managed paths under `${CLAUDE_PLUGIN_DATA}`)
 - `args`: Command-line arguments (typically `["--stdio"]`)
 - `extensionToLanguage`: Maps file extensions to LSP language IDs
 - `transport`: Always `"stdio"` for this project
@@ -82,5 +82,6 @@ scripts/
 ## Notes
 
 - Each plugin directory name should match the LSP tool name (e.g., `rust-analyzer`, `gopls`, `pyright`)
-- The `.lsp.json` can define multiple language servers in one file (see `vscode-langservers` for HTML + CSS example)
+- The `.lsp.json` can define multiple language servers in one file (see `vscode-langservers` for HTML + CSS + ESLint + JSON)
 - `.lsp.json` is canonical; generated `lspServers` in marketplace should not be hand-edited
+- `vscode-langservers` is the exception to the usual bare-PATH install model: it installs pinned npm dependencies into `${CLAUDE_PLUGIN_DATA}` via a `SessionStart` hook and launches them with `node`

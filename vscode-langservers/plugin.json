@@ -1,12 +1,12 @@
 {
   "name": "vscode-langservers",
-  "version": "0.1.0",
-  "description": "HTML, CSS, and ESLint language servers from VS Code",
+  "version": "0.2.0",
+  "description": "HTML from Zed plus CSS, ESLint, and JSON language servers from vscode-langservers-extracted",
   "author": {
     "name": "Piebald LLC",
     "email": "support@piebald.ai"
   },
-  "repository": "https://github.com/zed-industries/vscode-langservers-extracted",
+  "repository": "https://github.com/Piebald-AI/claude-code-lsps",
   "license": "MIT",
-  "keywords": ["html", "css", "eslint", "lsp", "language-server", "vscode"]
+  "keywords": ["html", "css", "eslint", "json", "lsp", "language-server", "vscode"]
 }

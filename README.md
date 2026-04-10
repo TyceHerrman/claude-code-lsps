@@ -29,7 +29,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, Svelte, OCaml, BSL (1C:Enterprise), Ada, Dart, Solidity, and Markdown/mdbase.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS/JSON, LaTeX, Julia, Vue, Svelte, OCaml, BSL (1C:Enterprise), Ada, Dart, Solidity, and Markdown/mdbase.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manually via `$ENABLE_LSP_TOOL=1`.
 
@@ -303,21 +303,18 @@ Install-Module -Name PowerShellEditorServices -Scope CurrentUser
 </details>
 
 <details>
-<summary>HTML/CSS/ESLint (<code>vscode-langservers</code>)</summary>
+<summary>HTML/CSS/ESLint/JSON (<code>vscode-langservers</code>)</summary>
 
-Install **@zed-industries/vscode-langservers-extracted** for HTML, CSS, and ESLint:
-```bash
-# npm
-npm install -g @zed-industries/vscode-langservers-extracted
+Requires **Node.js** with **npm** available in `PATH`.
 
-# pnpm
-pnpm install -g @zed-industries/vscode-langservers-extracted
+This plugin installs and caches its own pinned language server dependencies under Claude Code's plugin data directory on first session start and after plugin updates. It does not require any global `vscode-*-language-server` installs.
 
-# bun
-bun install -g @zed-industries/vscode-langservers-extracted
-```
+The first session after installing the plugin or after a plugin update may take 10-30 seconds, depending on network and npm cache state.
 
-This provides `vscode-html-language-server`, `vscode-css-language-server`, and `vscode-eslint-language-server` executables.
+- HTML is served by `@zed-industries/vscode-langservers-extracted`
+- CSS, ESLint, JSON, and JSONC are served by `vscode-langservers-extracted`
+
+After the first session start, the plugin provisions these internal binaries: `vscode-html-language-server`, `vscode-css-language-server`, `vscode-eslint-language-server`, and `vscode-json-language-server`.
 
 The ESLint language server requires ESLint to be installed in your project:
 ```bash

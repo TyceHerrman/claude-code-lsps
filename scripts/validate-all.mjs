@@ -54,6 +54,7 @@ if (args.has("-h") || args.has("--help")) {
 
 runStep("Sync marketplace LSP servers", "sync-lsp-to-marketplace.mjs");
 runStep("Validate repo LSP definitions", "validate-lsp-definitions.mjs");
+runStep("Validate vscode-langservers plugin-managed install", "validate-vscode-langservers.mjs");
 
 if (skipRuntime) {
   console.log("\n==> Skipping Claude runtime validation (--skip-runtime)");

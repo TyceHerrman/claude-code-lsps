@@ -281,13 +281,15 @@
     },
     {
       "name": "vscode-langservers",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "source": "./vscode-langservers",
-      "description": "HTML and CSS language servers from VS Code",
+      "description": "HTML from Zed plus CSS, ESLint, and JSON language servers from vscode-langservers-extracted",
       "category": "development",
       "tags": [
         "html",
         "css",
+        "eslint",
+        "json",
         "lsp",
         "language-server",
         "vscode"
@@ -298,11 +300,15 @@
       },
       "lspServers": {
         "css": {
-          "command": "vscode-css-language-server",
+          "command": "node",
           "args": [
+            "${CLAUDE_PLUGIN_DATA}/node_modules/vscode-langservers-extracted/bin/vscode-css-language-server",
             "--stdio"
           ],
           "transport": "stdio",
+          "env": {
+            "NODE_PATH": "${CLAUDE_PLUGIN_DATA}/node_modules"
+          },
           "extensionToLanguage": {
             ".css": "css",
             ".less": "less",
@@ -311,14 +317,19 @@
           },
           "initializationOptions": {},
           "settings": {},
+          "startupTimeout": 15000,
           "maxRestarts": 3
         },
         "eslint": {
-          "command": "vscode-eslint-language-server",
+          "command": "node",
           "args": [
+            "${CLAUDE_PLUGIN_DATA}/node_modules/vscode-langservers-extracted/bin/vscode-eslint-language-server",
             "--stdio"
           ],
           "transport": "stdio",
+          "env": {
+            "NODE_PATH": "${CLAUDE_PLUGIN_DATA}/node_modules"
+          },
           "extensionToLanguage": {
             ".astro": "astro",
             ".cjs": "javascript",
@@ -357,20 +368,45 @@
               "mode": "location"
             }
           },
+          "startupTimeout": 15000,
           "maxRestarts": 3
         },
         "html": {
-          "command": "vscode-html-language-server",
+          "command": "node",
           "args": [
+            "${CLAUDE_PLUGIN_DATA}/node_modules/@zed-industries/vscode-langservers-extracted/bin/vscode-html-language-server",
             "--stdio"
           ],
           "transport": "stdio",
+          "env": {
+            "NODE_PATH": "${CLAUDE_PLUGIN_DATA}/node_modules"
+          },
           "extensionToLanguage": {
             ".htm": "html",
             ".html": "html"
           },
           "initializationOptions": {},
           "settings": {},
+          "startupTimeout": 15000,
+          "maxRestarts": 3
+        },
+        "json": {
+          "command": "node",
+          "args": [
+            "${CLAUDE_PLUGIN_DATA}/node_modules/vscode-langservers-extracted/bin/vscode-json-language-server",
+            "--stdio"
+          ],
+          "transport": "stdio",
+          "env": {
+            "NODE_PATH": "${CLAUDE_PLUGIN_DATA}/node_modules"
+          },
+          "extensionToLanguage": {
+            ".json": "json",
+            ".jsonc": "jsonc"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "startupTimeout": 15000,
           "maxRestarts": 3
         }
       }

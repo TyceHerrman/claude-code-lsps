@@ -1,9 +1,13 @@
 {
     "html": {
-        "command": "vscode-html-language-server",
+        "command": "node",
         "args": [
+            "${CLAUDE_PLUGIN_DATA}/node_modules/@zed-industries/vscode-langservers-extracted/bin/vscode-html-language-server",
             "--stdio"
         ],
+        "env": {
+            "NODE_PATH": "${CLAUDE_PLUGIN_DATA}/node_modules"
+        },
         "extensionToLanguage": {
             ".html": "html",
             ".htm": "html"
@@ -11,13 +15,18 @@
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},
+        "startupTimeout": 15000,
         "maxRestarts": 3
     },
     "css": {
-        "command": "vscode-css-language-server",
+        "command": "node",
         "args": [
+            "${CLAUDE_PLUGIN_DATA}/node_modules/vscode-langservers-extracted/bin/vscode-css-language-server",
             "--stdio"
         ],
+        "env": {
+            "NODE_PATH": "${CLAUDE_PLUGIN_DATA}/node_modules"
+        },
         "extensionToLanguage": {
             ".css": "css",
             ".scss": "scss",
@@ -27,13 +36,18 @@
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},
+        "startupTimeout": 15000,
         "maxRestarts": 3
     },
     "eslint": {
-        "command": "vscode-eslint-language-server",
+        "command": "node",
         "args": [
+            "${CLAUDE_PLUGIN_DATA}/node_modules/vscode-langservers-extracted/bin/vscode-eslint-language-server",
             "--stdio"
         ],
+        "env": {
+            "NODE_PATH": "${CLAUDE_PLUGIN_DATA}/node_modules"
+        },
         "extensionToLanguage": {
             ".js": "javascript",
             ".jsx": "javascriptreact",
@@ -73,6 +87,26 @@
                 "mode": "location"
             }
         },
+        "startupTimeout": 15000,
+        "maxRestarts": 3
+    },
+    "json": {
+        "command": "node",
+        "args": [
+            "${CLAUDE_PLUGIN_DATA}/node_modules/vscode-langservers-extracted/bin/vscode-json-language-server",
+            "--stdio"
+        ],
+        "env": {
+            "NODE_PATH": "${CLAUDE_PLUGIN_DATA}/node_modules"
+        },
+        "extensionToLanguage": {
+            ".json": "json",
+            ".jsonc": "jsonc"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "startupTimeout": 15000,
         "maxRestarts": 3
     }
 }

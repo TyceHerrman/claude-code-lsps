@@ -1,0 +1,11 @@
+{
+  "name": "vscode-langservers-plugin-deps",
+  "private": true,
+  "version": "0.2.0",
+  "description": "Pinned dependencies for the vscode-langservers Claude Code plugin",
+  "license": "MIT",
+  "dependencies": {
+    "@zed-industries/vscode-langservers-extracted": "4.10.7",
+    "vscode-langservers-extracted": "4.10.0"
+  }
+}

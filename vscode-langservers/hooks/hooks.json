@@ -1,0 +1,15 @@
+{
+  "description": "Install pinned vscode language server dependencies for the plugin",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/scripts/install-deps.mjs\""
+          }
+        ]
+      }
+    ]
+  }
+}
